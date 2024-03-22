@@ -10,8 +10,21 @@ export default async function decorate(block) {
   block.textContent = '';
 
   // load footer fragment
-  const footerPath = footerMeta.footer || '/footer';
-  const fragment = await loadFragment(footerPath);
+  var currentPageUrl = window.location.href;
+
+
+let footerPath;
+
+if (currentPageUrl.includes('fr')) {
+    console.log("The URL contains 'FR'.");
+    footerPath = footerMeta.footer || '/fr/footer';
+} else if (currentPageUrl.includes('en')) {
+    console.log("The URL contains 'EN'.");
+    footerPath = footerMeta.footer || '/en/footer';
+    console.log("Value of footerpath: " + footerPath);
+}
+
+const fragment = await loadFragment(footerPath);
 
   // decorate footer DOM
   const footer = document.createElement('div');

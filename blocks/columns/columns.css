@@ -1,3 +1,52 @@
+:root {
+  --light-grey: #f3f3f3;
+  --blue: #005cb9;
+  --red: #b94a48;
+
+  --c: #000000;
+  --cLink: #005cb9;
+  --cLInkHover: #005cb9;
+
+  --c-h1: #005cb9;
+  --c-h2: #000000;
+  --c-h3: #000000;
+  --c-h4: #000000;
+  --c-h5: #000000;
+  --c-h6: #000000;
+
+  --fz: 16px;
+  --ff: Arial, Helvetica, sans-serif;
+  --ffJa: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ",
+    "Meiryo", "ＭＳ Ｐゴシック", "Osaka", "Arial", "Helvetica", Sans-serif;
+  --ffHeading: "Roboto", Arial, Helvetica, sans-serif;
+
+  --lh: 1.8em;
+
+  --fz-h1: 30px;
+  --fz-h2: 25px;
+  --fz-h3: 20px;
+  --fz-h4: 18px;
+  --fz-h5: 15px;
+  --fz-h6: 14px;
+
+  --fz-h1-tablet: 28px;
+  --fz-h2-tablet: 25px;
+  --fz-h3-tablet: 20px;
+  --fz-h4-tablet: 18px;
+  --fz-h5-tablet: 15px;
+  --fz-h6-tablet: 14px;
+
+  --fz-h1-mobile: 24px;
+  --fz-h2-mobile: 20px;
+  --fz-h3-mobile: 18px;
+  --fz-h4-mobile: 16px;
+  --fz-h5-mobile: 15px;
+  --fz-h6-mobile: 14px;
+
+  --sprite: url(../data/i/sprite.png?ver3);
+  --bdc: #e7e7e7;
+}
+
 .columns > div {
   display: flex;
   flex-direction: column;
@@ -21,7 +70,7 @@
 
 @media (width >= 900px) {
   .columns > div {
-    align-items: center;
+    align-items: flex-start;
     flex-direction: unset;
     gap: 32px;
   }
@@ -30,4 +79,76 @@
     flex: 1;
     order: unset;
   }
+}
+.joinus .columns-wrapper > .columns > div {
+  border-left: 1px solid #000;
+  padding-left: 50px;
+}
+.joinus .columns-wrapper > .columns > div > div > p {
+  font-size: 16px;
+}
+.joinus .columns-wrapper > .columns > div > div > .button-container a {
+  background-color: #005cb9;
+  color: #ffffff;
+  border: 2px solid #005cb9;
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: box-shadow 0.3s;
+  line-height: 1.8em;
+  cursor: pointer;
+}
+
+.join-us {
+  font-size: 25px;
+}
+.black > .columns-wrapper > .columns > div > div {
+  margin-top: 0;
+}
+.black > .columns-wrapper > .columns > div > div > h2 {
+  font-size: 25px;
+}
+.black > .columns-wrapper > .columns > div > div > p {
+  font-size: var(--fz);
+}
+.custom-cms-content{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+}
+.custom-cms-content > div{
+        width: calc(50% - 40px);
+        flex-direction: column;
+        padding: 20px 40px 0 0;
+    }
+.custom-cms-content h2{
+font-size: 25px;
+}
+.custom-cms-content li{
+font-size: 16px;
+}
+.custom-cms-content .columns-img-col {
+    flex: 0 !important;
+}
+.custom-cms-content a {
+    color: #000000;
+    padding: 0;
+    background-color: transparent;
+    border: 0 none;
+    font-weight: bold;
+    font-size: 18px;
+}
+.custom-cms-content > div:nth-child(1) {
+    border-right: 1px solid #000;
+}
+.custom-cms-content > div:nth-child(2) {
+    padding: 20px 0 0 25px;
+}
+
+.custom-cms-content > div > div:nth-child(2){
+    width: 100%;
 }
