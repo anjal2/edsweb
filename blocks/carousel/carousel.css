@@ -5,8 +5,9 @@
 .carousel-container{
    width: calc(66.6666% - 15px);
 }
-.slider > div {
+.slider > div, .slider .slick-slide {
    width: calc(33.3333% - 20px);
+   border: 1px solid black;
 }
 
 .careers .columns-wrapper {
@@ -22,3 +23,4 @@
 #who-we-are {
  font-size: 25px;
 }
+
