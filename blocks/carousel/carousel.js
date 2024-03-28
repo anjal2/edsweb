@@ -23,5 +23,23 @@ $('.slider').slick({
   });
 
 
+// ---------------
+var firstDiv = document.getElementsByClassName('slider-left-container');
+    var secondDiv = document.getElementsByClassName('carousel-container');
+
+    // Create a new parent div
+    var parentDiv = document.createElement('div');
+
+    // Assign an ID to the parent div
+    parentDiv.className = 'parentContainer';
+
+    // Append the parent div to the DOM
+    firstDiv.parentNode.insertBefore(parentDiv, firstDiv);
+
+    // Move the existing div elements into the parent div
+    parentDiv.appendChild(firstDiv);
+    parentDiv.appendChild(secondDiv);
+
+
 
 }
