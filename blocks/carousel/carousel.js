@@ -20,6 +20,7 @@ export default function decorate(block){
 //   });
 
 document.addEventListener("DOMContentLoaded", function() {
+    console.log("inside tjis");
     const carousel = document.querySelector(".carousel");
     const carouselWrapper = document.querySelector(".carousel-wrapper");
     const slides = document.querySelectorAll(".carousel > div");
