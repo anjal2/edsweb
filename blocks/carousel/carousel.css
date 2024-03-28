@@ -28,11 +28,14 @@
 
 
  */
-
+ .parent-container{
+    display: flex;
+    justify-content: space-between;
+ }
 
 .section.slider-left-container {
     width: calc(33.3333% - 15px);
-    display: inline-flex;
+    /* display: inline-block; */
 
     h2{
         font-size: 25px;
@@ -63,7 +66,7 @@
 
 .section.carousel-container {
     width: calc(57.6666% - 15px);
-    display: inline-block;
+    /* display: inline-block; */
     background-color: #f3f3f3;
     padding: 30px;
     position: relative;
