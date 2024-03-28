@@ -22,6 +22,26 @@ export default function decorate(block) {
     });
 
 
+    var sliderDiv = document.querySelector('.slider-left-container');
+    var carouselDiv = document.querySelector('.carousel-container');
+
+    // Create a new parent div
+    var parentDiv = document.createElement('div');
+    parentDiv.classList.add('parent-container'); // Optional: add a class to the parent div
+
+    // Append the selected divs to the parent div
+    if (sliderDiv && carouselDiv) {
+        parentDiv.appendChild(sliderDiv.cloneNode(true));
+        parentDiv.appendChild(carouselDiv.cloneNode(true));
+
+        // Replace the existing divs with the parent div
+        sliderDiv.parentNode.replaceChild(parentDiv, sliderDiv);
+        carouselDiv.parentNode.removeChild(carouselDiv); // Remove the carousel div from its original location
+    } else {
+        console.error("One or both of the divs not found.");
+    }
+
+
     // // --------------
     // const div1 = document.getElementsByClassName('slider-left-container')[0]; // Added index [0] to select the first element
     // const div2 = document.getElementsByClassName('carousel-container')[0]; // Added index [0] to select the first element
