@@ -66,7 +66,7 @@
 
 .section.carousel-container {
     width: calc(57.6666% - 15px);
-    /* display: inline-block; */
+     display: inline-block !important;
     background-color: #f3f3f3;
     padding: 30px;
     position: relative;
