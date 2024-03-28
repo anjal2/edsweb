@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
   
     function moveCarousel(index) {
       const offset = -index * slideWidth;
-      carouselWrapper.style.transform = translateX(${offset}px);
+      carouselWrapper.style.transform = `translateX(${offset}px)`;
       currentIndex = index;
     }
   
