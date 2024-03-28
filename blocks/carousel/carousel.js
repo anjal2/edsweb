@@ -23,23 +23,30 @@ $('.slider').slick({
   });
 
 
-// ---------------
-var firstDiv = document.getElementsByClassName('slider-left-container');
-    var secondDiv = document.getElementsByClassName('carousel-container');
+// --------------
+const div1 = document.getElementsByClassName('slider-left-container')[0]; // Added index [0] to select the first element
+const div2 = document.getElementsByClassName('carousel-container')[0]; // Added index [0] to select the first element
 
-    // Create a new parent div
-    var parentDiv = document.createElement('div');
+// Create a new div to wrap them
+const wrapperDiv = document.createElement("div");
+wrapperDiv.className="parentContainer";
 
-    // Assign an ID to the parent div
-    parentDiv.className = 'parentContainer';
+// Wrap div1 inside the new div
+if (div1) {
+    wrapperDiv.appendChild(div1.cloneNode(true)); // Cloned the node to avoid moving it
+} else {
+    console.error("Element with class 'slider-left-container' not found.");
+}
 
-    // Append the parent div to the DOM
-    firstDiv.parentNode.insertBefore(parentDiv, firstDiv);
+// Wrap div2 inside the new div (optional, depending on desired order)
+if (div2) {
+    wrapperDiv.appendChild(div2.cloneNode(true)); // Cloned the node to avoid moving it
+} else {
+    console.error("Element with class 'carousel-container' not found.");
+}
 
-    // Move the existing div elements into the parent div
-    parentDiv.appendChild(firstDiv);
-    parentDiv.appendChild(secondDiv);
-
+// Insert the wrapper div directly into the body (assuming no parent container)
+document.body.appendChild(wrapperDiv);
 
 
 }
