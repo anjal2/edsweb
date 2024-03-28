@@ -4,8 +4,8 @@ export default function decorate(block){
     
 
 $('.carousel').slick({
-    slidesToShow: 4,
-    slidesToScroll: 4
+    slidesToShow: 3,
+    slidesToScroll: 3
   });
   
   var filtered = false;
