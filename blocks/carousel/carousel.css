@@ -30,11 +30,34 @@
  */
 
 
- .section.slider-left-container{
+.section.slider-left-container {
     width: calc(33.3333% - 15px);
     display: inline-flex;
- }
- .section.carousel-container{
+}
+
+.section.carousel-container {
     width: calc(57.6666% - 15px);
     display: inline-block;
- }
+    background-color: #f3f3f3;
+    padding: 30px;
+    position: relative;
+
+    img {
+        border-radius: 50%;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+        width: 130px;
+        height: 130px;
+    }
+
+    p {
+        margin: 0 0 20px;
+        font-size: 16px;
+        line-height: 28.8px;
+    }
+    h3{
+    font-size: 20px;
+    line-height: 1.3em;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    }
+}
