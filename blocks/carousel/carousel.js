@@ -1,6 +1,6 @@
 
 export default function decorate(block){
-$('.carousel').slick({
+$('.slider').slick({
     slidesToShow: 3,
     slidesToScroll: 3
   });
